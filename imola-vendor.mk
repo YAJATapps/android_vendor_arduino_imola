@@ -53,3 +53,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/vendor/firmware/ath10k/WCN3990/hw1.0/wlanmdsp.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/ath10k/WCN3990/hw1.0/wlanmdsp.mbn \
     $(LOCAL_PATH)/proprietary/vendor/firmware/ath10k/WCN3990/hw1.0/qcm2290/firmware-5.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/ath10k/WCN3990/hw1.0/qcm2290/firmware-5.bin \
     $(LOCAL_PATH)/proprietary/vendor/firmware/ath10k/WCN3990/hw1.0/qcm2290/wlanmdsp.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/ath10k/WCN3990/hw1.0/qcm2290/wlanmdsp.mbn
+
+# Qualcomm Bluetooth Firmware (WCN3988 / WCN3990)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qca/apbtfw10.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/apbtfw10.tlv \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qca/apbtfw11.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/apbtfw11.tlv \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qca/apnv10.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/apnv10.bin \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qca/apnv11.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/apnv11.bin \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qca/crbtfw21.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/crbtfw21.tlv \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qca/crbtfw32.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/crbtfw32.tlv \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qca/crnv21.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/crnv21.bin \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qca/crnv32.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/crnv32.bin \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qca/crnv32u.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/crnv32u.bin
