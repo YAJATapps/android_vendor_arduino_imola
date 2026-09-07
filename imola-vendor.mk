@@ -6,6 +6,22 @@
 
 LOCAL_PATH := vendor/arduino/imola
 
+# Namespaces for Soong prebuilts
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/arduino/imola
+
+# Mesa3D Freedreno / Turnip / GLES / EGL / Vulkan Prebuilts
+ifeq ($(TARGET_BUILD_MESA), true)
+PRODUCT_PACKAGES += \
+    libEGL_mesa \
+    libGLESv1_CM_mesa \
+    libGLESv2_mesa \
+    libgallium_dri \
+    libgbm_mesa \
+    dri_gbm \
+    vulkan.freedreno
+endif
+
 # Adreno 702 GPU Firmware
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/vendor/firmware/a702_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a702_sqe.fw \
