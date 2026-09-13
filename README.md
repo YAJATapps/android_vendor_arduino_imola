@@ -56,3 +56,24 @@ This repository contains prebuilt proprietary firmware blobs, DSP binaries, and 
   - `libgbm_mesa.so` / `dri_gbm.so`: Mesa GBM buffer allocation backends (`/vendor/lib64/libgbm_mesa.so`, `/vendor/lib64/dri_gbm.so`)
   - `libEGL.so`, `libGLESv1_CM.so`, `libGLESv2.so`: OpenGL ES 1.1 / 2.0 / 3.1 drivers (`/vendor/lib64/egl/`)
   - `vulkan.freedreno.so`: Turnip Vulkan driver (`/vendor/lib64/hw/vulkan.freedreno.so`)
+
+---
+
+## 4. Prebuilt Bootloader (U-Boot)
+- **Source**: Extracted from official Armbian release for Arduino Uno Q (`imola`).
+- **Path**: `proprietary/bootloader/boot.img`
+- **Purpose**: Encapsulates U-Boot (`u-boot-nodtb.bin`) and the Arduino Uno Q device tree into an Android boot image format (`root=/dev/notreal`) required by Qualcomm ABL in partitions `boot_a` and `boot_b` to jump into U-Boot and chainload the LineageOS kernel.
+- **Flashing Target**: Packaged into distribution releases by `device/arduino/imola/tools/package_qdl.py` to populate eMMC partitions `boot_a` / `boot_b` via EDL.
+
+---
+
+## 5. Qualcomm Flashing Tools & Firmware (`qcombin`)
+- **Repository**: [https://github.com/armbian/qcombin.git](https://github.com/armbian/qcombin.git)
+- **Path in Tree**: `vendor/arduino/imola/qcombin/` (target: `Agatti/arduino-uno-q/`)
+- **Components**:
+  - `prog_firehose_ddr.elf` (Qualcomm Firehose EDL programmer)
+  - `patch0.xml` (Partition layout patch table)
+  - Qualcomm stage-1/2 bootloader blobs: `xbl.elf`, `tz.mbn`, `rpm.mbn`, `hyp.mbn`, `abl.elf`, `devcfg.mbn`, etc.
+- **Purpose**: Used by `device/arduino/imola/tools/package_qdl.py` to create the EDL `flash/` directory for flashing via `qdl`.
+
+
