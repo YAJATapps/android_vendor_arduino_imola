@@ -8,7 +8,6 @@ This repository contains prebuilt proprietary firmware blobs, DSP binaries, and 
 - **Source**: Extracted directly from stock vendor firmware images.
 - **Components**:
   - **Adreno 702 GPU**:
-    - `proprietary/vendor/firmware/a702_sqe.fw` -> `/vendor/firmware/a702_sqe.fw`
     - `proprietary/vendor/firmware/qcom/a702_sqe.fw` -> `/vendor/firmware/qcom/a702_sqe.fw`
     - `proprietary/vendor/firmware/qcom/qcm2290/a702_zap.mbn` -> `/vendor/firmware/qcom/qcm2290/a702_zap.mbn`
   - **Venus 6.0 Video Decoder**:

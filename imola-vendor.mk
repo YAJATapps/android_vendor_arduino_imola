@@ -22,11 +22,12 @@ PRODUCT_PACKAGES += \
     vulkan.freedreno
 endif
 
-# Adreno 702 GPU Firmware
+# Adreno 702 GPU Firmware (early boot ramdisk + vendor)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/vendor/firmware/a702_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a702_sqe.fw \
     $(LOCAL_PATH)/proprietary/vendor/firmware/qcom/a702_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/a702_sqe.fw \
-    $(LOCAL_PATH)/proprietary/vendor/firmware/qcom/qcm2290/a702_zap.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/qcm2290/a702_zap.mbn
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qcom/qcm2290/a702_zap.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/qcm2290/a702_zap.mbn \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qcom/a702_sqe.fw:$(TARGET_COPY_OUT_RAMDISK)/lib/firmware/qcom/a702_sqe.fw \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/qcom/qcm2290/a702_zap.mbn:$(TARGET_COPY_OUT_RAMDISK)/lib/firmware/qcom/qcm2290/a702_zap.mbn
 
 # Venus 6.0 Video Decoder Firmware
 PRODUCT_COPY_FILES += \
