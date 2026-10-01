@@ -1,0 +1,14 @@
+#!/vendor/bin/sh
+#
+# Copyright (C) 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+DIR="/vendor/etc/openocd"
+LIBDIR="/vendor/lib64/openocd"
+LOADER="/vendor/bin/ld-linux-aarch64.so.1"
+[ -f "$LOADER" ] || LOADER="$LIBDIR/ld-linux-aarch64.so.1"
+
+exec "$LOADER" --library-path "$LIBDIR" "/vendor/bin/openocd" \
+    -s "$DIR" -s "$DIR/share/openocd/scripts" -f "$DIR/openocd_gpiod.cfg" \
+    -c "telnet_port 4444; gdb_port disabled; init"

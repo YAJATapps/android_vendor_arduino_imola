@@ -75,4 +75,15 @@ This repository contains prebuilt proprietary firmware blobs, DSP binaries, and 
   - Qualcomm stage-1/2 bootloader blobs: `xbl.elf`, `tz.mbn`, `rpm.mbn`, `hyp.mbn`, `abl.elf`, `devcfg.mbn`, etc.
 - **Purpose**: Used by `device/arduino/imola/tools/package_qdl.py` to create the EDL `flash/` directory for flashing via `qdl`.
 
+---
+
+## 6. Arduino Router & OpenOCD SWD Prebuilts
+- **Source**: Extracted from official Arduino Uno Q Debian system image.
+- **Components**:
+  - `proprietary/vendor/bin/arduino-router`: Official statically-linked MessagePack-RPC daemon communicating with the STM32 co-processor over `/dev/ttyHS1` and serving unix socket `/dev/socket/arduino-router.sock`.
+  - `proprietary/vendor/bin/openocd` & `openocd-launcher`: ARM64 OpenOCD daemon and launcher script interfacing with STM32 CoreSight SWD over QRB2210 bitbang GPIOs (SWCLK, SWDIO, SRST).
+  - `proprietary/vendor/lib64/openocd/`: Isolated glibc dynamic loader (`ld-linux-aarch64.so.1`), `libc.so.6`, and `libgpiod.so.3` enabling OpenOCD to execute seamlessly on Android.
+  - `proprietary/vendor/etc/openocd/`: Hardware target configurations (`openocd_gpiod.cfg`, `stm32u5x.cfg`, `stm32x5x_common.cfg`) and CoreSight helper scripts.
+- **Purpose**: Powers hardware GPIO control and pin state synchronization for `imola-bridge` and user-facing apps (such as `WiringUno`).
+
 

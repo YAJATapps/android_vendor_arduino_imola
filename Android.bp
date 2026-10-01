@@ -6,3 +6,10 @@
 
 soong_namespace {
 }
+
+cc_prebuilt_binary {
+    name: "arduino-router",
+    srcs: ["proprietary/vendor/bin/arduino-router"],
+    vendor: true,
+    check_elf_files: false,
+}

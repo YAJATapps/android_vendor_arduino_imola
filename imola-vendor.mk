@@ -66,3 +66,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/vendor/firmware/qca/crnv21.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/crnv21.bin \
     $(LOCAL_PATH)/proprietary/vendor/firmware/qca/crnv32.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/crnv32.bin \
     $(LOCAL_PATH)/proprietary/vendor/firmware/qca/crnv32u.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/qca/crnv32u.bin
+
+# Arduino Router RPC Daemon
+PRODUCT_PACKAGES += \
+    arduino-router
+
+# OpenOCD & ARM CoreSight SWD Hardware Prebuilts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/vendor/bin/openocd:$(TARGET_COPY_OUT_VENDOR)/bin/openocd \
+    $(LOCAL_PATH)/proprietary/vendor/bin/openocd-launcher:$(TARGET_COPY_OUT_VENDOR)/bin/openocd-launcher \
+    $(LOCAL_PATH)/proprietary/vendor/lib64/openocd/ld-linux-aarch64.so.1:$(TARGET_COPY_OUT_VENDOR)/bin/ld-linux-aarch64.so.1 \
+    $(LOCAL_PATH)/proprietary/vendor/etc/openocd/openocd_gpiod.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/openocd/openocd_gpiod.cfg \
+    $(LOCAL_PATH)/proprietary/vendor/etc/openocd/stm32u5x.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/openocd/stm32u5x.cfg \
+    $(LOCAL_PATH)/proprietary/vendor/etc/openocd/stm32x5x_common.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/openocd/stm32x5x_common.cfg \
+    $(LOCAL_PATH)/proprietary/vendor/lib64/openocd/ld-linux-aarch64.so.1:$(TARGET_COPY_OUT_VENDOR)/lib64/openocd/ld-linux-aarch64.so.1 \
+    $(LOCAL_PATH)/proprietary/vendor/lib64/openocd/libc.so.6:$(TARGET_COPY_OUT_VENDOR)/lib64/openocd/libc.so.6 \
+    $(LOCAL_PATH)/proprietary/vendor/lib64/openocd/libgpiod.so.3:$(TARGET_COPY_OUT_VENDOR)/lib64/openocd/libgpiod.so.3 \
+    $(LOCAL_PATH)/proprietary/vendor/lib64/openocd/libgpiod.so.3.1.1:$(TARGET_COPY_OUT_VENDOR)/lib64/openocd/libgpiod.so.3.1.1 \
+    $(LOCAL_PATH)/proprietary/vendor/etc/openocd/share/openocd/scripts/target/swj-dp.tcl:$(TARGET_COPY_OUT_VENDOR)/etc/openocd/share/openocd/scripts/target/swj-dp.tcl \
+    $(LOCAL_PATH)/proprietary/vendor/etc/openocd/share/openocd/scripts/mem_helper.tcl:$(TARGET_COPY_OUT_VENDOR)/etc/openocd/share/openocd/scripts/mem_helper.tcl
+
