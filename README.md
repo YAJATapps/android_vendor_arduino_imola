@@ -1,6 +1,6 @@
 # Proprietary Vendor Blobs for Qualcomm QRB2210 / QCM2290 (Arduino Uno Q)
 
-This repository contains prebuilt proprietary firmware blobs, DSP binaries, and graphics acceleration libraries required for LineageOS 23.2 on Qualcomm QRB2210 / QCM2290 (Arduino Uno Q / `imola`) devices.
+This repository contains prebuilt proprietary firmware blobs, DSP binaries, and graphics acceleration libraries required for LineageOS 24 on Qualcomm QRB2210 / QCM2290 (Arduino Uno Q / `imola`) devices.
 
 ---
 
@@ -47,7 +47,7 @@ This repository contains prebuilt proprietary firmware blobs, DSP binaries, and 
 ---
 
 ## 3. Mesa3D Freedreno / Turnip (Adreno 702) Graphics Acceleration Prebuilts
-- **Version**: Mesa 26.2.2 (Release)
+- **Version**: Mesa 26.2.4 (Release)
 - **Source**: Built out-of-tree using the standalone cross-compilation pipeline script:
   - Gist: [https://gist.github.com/YAJATapps/5589c3c4d32e02cd6c34dcdb9501aacc](https://gist.github.com/YAJATapps/5589c3c4d32e02cd6c34dcdb9501aacc)
 - **Components**:
